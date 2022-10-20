@@ -11,7 +11,7 @@ public class Conexion {
     public static String user = "root";
     public static String password = "root";
     public static String db = "banco";
-    public static boolean flag = false;
+    
     
     public Connection getConnection(String host, String user, String password, String db){
         Connection con = null;
