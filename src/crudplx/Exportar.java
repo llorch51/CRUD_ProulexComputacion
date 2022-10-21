@@ -35,8 +35,8 @@ public class Exportar {
             //si el archivo se puede generar, entonces intentamos exportar
             if (archivo != null) {
                 //transformar el objeto 'archivo' a documento de Excel
-                //archivo = new File(archivo.toString() + ".xlsx");
-                archivo = new File(archivo.toString() + ".csv");
+                archivo = new File(archivo.toString() + ".xlsx");
+                //archivo = new File(archivo.toString() + ".csv");
                 //generar el libro de excel
                 Workbook libro = new XSSFWorkbook();
                 //generar una hoja de excel

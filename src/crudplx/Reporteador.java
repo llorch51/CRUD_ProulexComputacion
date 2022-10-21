@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 public class Reporteador extends javax.swing.JFrame {
 
     Fondo fondo = new Fondo();
+    Reportes reporte1 = null;
     
     public Reporteador() {
         this.setContentPane(fondo);
@@ -66,6 +67,11 @@ public class Reporteador extends javax.swing.JFrame {
         jLabel1.setText("Reportes MySQL Java");
 
         btnReporte1.setContentAreaFilled(false);
+        btnReporte1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReporte1ActionPerformed(evt);
+            }
+        });
 
         btnReporte2.setContentAreaFilled(false);
 
@@ -78,7 +84,6 @@ public class Reporteador extends javax.swing.JFrame {
         btnReporte6.setContentAreaFilled(false);
 
         jMenuBar2.setForeground(new java.awt.Color(0, 255, 0));
-        jMenuBar2.setOpaque(false);
 
         jMenu3.setForeground(new java.awt.Color(0, 255, 0));
         jMenu3.setText("Menú");
@@ -253,6 +258,13 @@ public class Reporteador extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "se canceló la operación");
         }
     }//GEN-LAST:event_menuSalirActionPerformed
+
+    private void btnReporte1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporte1ActionPerformed
+        String query1 = "select * from cliente";
+        reporte1 = new Reportes();
+        reporte1.generarReportes(query1);
+        
+    }//GEN-LAST:event_btnReporte1ActionPerformed
 
     /**
      * @param args the command line arguments

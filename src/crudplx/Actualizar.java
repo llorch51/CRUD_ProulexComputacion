@@ -354,7 +354,7 @@ private void habilitar(){
                     txtID.selectAll();
             }else{
                  ResultSetMetaData rsmd = (ResultSetMetaData) rs.getMetaData();
-                int cantidadColumnas = rsmd.getColumnCount();
+                //int cantidadColumnas = rsmd.getColumnCount();
                 
                 while(rs.next()){
                     txtPaterno.setText(rs.getString(2));
